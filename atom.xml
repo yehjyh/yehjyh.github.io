@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>个人博客</title>
+  
+  <subtitle>试验用</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2025-01-18T16:14:45.195Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>Chern Yeh-jyh</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MathJax用法</title>
+    <link href="http://example.com/2025/01/18/MathJex%E7%94%A8%E6%B3%95/"/>
+    <id>http://example.com/2025/01/18/MathJex%E7%94%A8%E6%B3%95/</id>
+    <published>2025-01-18T15:42:52.000Z</published>
+    <updated>2025-01-18T16:14:45.195Z</updated>
+    
+    <content type="html"><![CDATA[<p>MathJax 是一个跨浏览器的 JavaScript 库，它使用 LaTeX、MathML 和 AsciiMath 标记在网页上显示数学符号和公式。以下是一些基本的 MathJax 用法：</p><h3 id="内联（Inline）与块级（Display）公式"><a href="#内联（Inline）与块级（Display）公式" class="headerlink" title="内联（Inline）与块级（Display）公式"></a>内联（Inline）与块级（Display）公式</h3><ul><li><strong>内联公式</strong>：将公式嵌入到文本中，通常使用 <code>$...$</code> 包围。</li><li><strong>块级公式</strong>：公式独立成行，通常使用 <code>$$...$$</code> 或 <code>$$</code> 包围。</li></ul><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><ul><li><p><strong>上下标</strong>：</p><ul><li>上标使用 <code>^</code>，如 <code>x^2</code> 显示为 $x^2$。</li><li>下标使用 <code>_</code>，如 <code>x_i</code> 显示为 $x_i$。</li><li>如果上下标内容多于一个字符，需要使用花括号 <code>&#123;&#125;</code> 来分组，例如 <code>x^&#123;10&#125;</code> 显示为$x^{10}$。</li></ul></li><li><p><strong>希腊字母</strong>：使用命令 <code>\lettername</code>，例如 <code>\alpha</code> 显示为$\alpha$，<code>\Delta</code> 显示为$\Delta$。</p></li><li><p><strong>分数</strong>：使用 <code>\frac&#123;numerator&#125;&#123;denominator&#125;</code>，例如 <code>\frac&#123;1&#125;&#123;2&#125;</code> 显示为$\frac{1}{2}$。</p></li><li><p><strong>平方根和其他根</strong>：使用 <code>\sqrt[root]&#123;radicand&#125;</code>，例如 <code>\sqrt&#123;x&#125;</code> 显示为 $\sqrt{x}$，<code>\sqrt[3]&#123;x&#125;</code> 显示为 $\sqrt[3]{x}$。</p></li><li><p><strong>求和与积分</strong>：分别使用 <code>\sum</code> 和 <code>\int</code>，例如 <code>\sum_&#123;i=1&#125;^n i^2</code> 显示为$\sum_{i&#x3D;1}^n i^2$，<code>\int_a^b f(x)dx</code> 显示为 $\int_a^b f(x)dx$。</p></li><li><p><strong>括号</strong>：普通圆括号 <code>()</code> 和方括号 <code>[]</code> 可以直接使用，大括号需要用 <code>\&#123;...\&#125;</code> 表示，例如 <code>\&#123;a, b, c\&#125;</code> 显示为 ${a, b, c}$。自动调整大小的括号可以使用 <code>\left(...\right)</code>，例如 <code>\left(\frac&#123;x&#125;&#123;y&#125;\right)</code> 显示为 $\left(\frac{x}{y}\right)$。</p></li><li><p><strong>空格</strong>：MathJax 中默认忽略空格，如果需要添加空格，可以使用 <code>\,</code>（小空格）、<code>\:</code>（中空格）、<code>\;</code>（大空格），或者 <code>\!</code>（负空格）。</p></li><li><p><strong>矩阵</strong>：可以使用 <code>matrix</code> 环境，例如：</p><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;matrix&#125;</span><br><span class="line">1 <span class="built_in">&amp;</span> 2 <span class="built_in">&amp;</span> 3 <span class="keyword">\\</span></span><br><span class="line">a <span class="built_in">&amp;</span> b <span class="built_in">&amp;</span> c</span><br><span class="line"><span class="keyword">\end</span>&#123;matrix&#125;</span><br></pre></td></tr></table></figure><p>显示为<br>$$<br>\begin{matrix}<br>1 &amp; 2 &amp; 3 \<br>a &amp; b &amp; c<br>\end{matrix}<br>$$</p><p>如果想要带括号的矩阵，可以用 <code>pmatrix</code> (圆括号), <code>bmatrix</code> (方括号), <code>Bmatrix</code> (大括号), <code>vmatrix</code> (单竖线), <code>Vmatrix</code> (双竖线)。</p></li><li><p><strong>对齐等式</strong>：使用 <code>align</code> 环境，例如：</p><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;align&#125;</span><br><span class="line">x <span class="built_in">&amp;</span>= y + z <span class="keyword">\\</span></span><br><span class="line">a <span class="built_in">&amp;</span>= b + c + d</span><br><span class="line"><span class="keyword">\end</span>&#123;align&#125;</span><br></pre></td></tr></table></figure><p>显示为<br>$$<br>\begin{align}<br>x &amp;&#x3D; y + z \<br>a &amp;&#x3D; b + c + d<br>\end{align}<br>$$</p></li></ul><p>这些只是 MathJax 的一些基础功能，实际上它支持更复杂的数学表达和排版。<br>注意事项：记得这里所用的都是反斜杠’&#39;，不是斜杠’&#x2F;‘。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;MathJax 是一个跨浏览器的 JavaScript 库，它使用 LaTeX、MathML 和 AsciiMath 标记在网页上显示数学符号和公式。以下是一些基本的 MathJax 用法：&lt;/p&gt;
+&lt;h3 id=&quot;内联（Inline）与块级（Display）公式&quot;&gt;&lt;a </summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/2024/12/30/hello-world/"/>
+    <id>http://example.com/2024/12/30/hello-world/</id>
+    <published>2024-12-30T14:16:19.602Z</published>
+    <updated>2024-12-30T14:16:19.602Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
