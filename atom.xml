@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>个人博客</title>
+  <title>偶成</title>
   
-  <subtitle>试验用</subtitle>
+  <subtitle>冀以尘雾之微补益山海，荧烛末光增辉日月</subtitle>
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-03-14T08:58:24.508Z</updated>
+  <updated>2025-03-14T09:08:43.873Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pacman命令一览</title>
+    <link href="http://example.com/2025/03/14/pacman%E5%91%BD%E4%BB%A4%E4%B8%80%E8%A7%88/"/>
+    <id>http://example.com/2025/03/14/pacman%E5%91%BD%E4%BB%A4%E4%B8%80%E8%A7%88/</id>
+    <published>2025-03-14T09:07:52.000Z</published>
+    <updated>2025-03-14T09:08:43.873Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>pacman</code> 是 Arch Linux 及其衍生发行版中的包管理器。它用于安装、卸载、升级以及搜索软件包。常用的 <code>pacman</code> 命令及其用法如下：</p><h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><ul><li><code>pacman -S package_name</code>: 安装指定的软件包。</li><li><code>pacman -R package_name</code>: 卸载指定的软件包。</li><li><code>pacman -Q</code>: 列出所有已安装的软件包。</li><li><code>pacman -Qd</code>: 显示数据库中可用但未安装的任何包。</li><li><code>pacman -Qe</code>: 显示显式安装的所有包。</li><li><code>pacman -Qm</code>: 列出手动安装的包（非依赖项）。</li><li><code>pacman -Sy</code>: 同步并更新软件包数据库。</li><li><code>pacman -Su</code>: 执行系统升级，包括软件包和核心模块。</li><li><code>pacman -Scc</code>: 清除缓存目录中的旧包文件。</li><li><code>pacman -Sc</code>: 清空整个缓存目录。</li><li><code>pacman -Si package_name</code>: 显示软件包的信息。</li><li><code>pacman -Sl</code>: 列出本地已安装的软件包。</li><li><code>pacman -Ss search_term</code>: 搜索包含 search_term 的软件包。</li><li><code>pacman -Ql package_name</code>: 列出指定软件包的文件列表。</li><li><code>pacman -Qi package_name</code>: 显示指定软件包的信息。</li><li><code>pacman -Qg</code>: 显示所有组。</li><li><code>pacman -Qk</code>: 显示所有关键字。</li><li><code>pacman -Qr</code>: 显示所有可移除的软件包。</li></ul><h3 id="高级操作"><a href="#高级操作" class="headerlink" title="高级操作"></a>高级操作</h3><ul><li><code>pacman -D</code>: 数据库工具。</li><li><code>pacman -F</code>: 从文件中读取命令。</li><li><code>pacman -G</code>: 创建一个新的数据库文件。</li><li><code>pacman -U package_file</code>: 从文件系统直接安装或升级一个包。</li><li><code>pacman -V</code>: 验证文件完整性。</li><li><code>pacman -X [command]</code>: 在临时安装根目录下执行一个命令。</li></ul><h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><ul><li><code>pacman -Qf filename</code>: 显示哪个包提供了给定的文件。</li><li><code>pacman -U package_file</code>: 从文件系统直接安装或升级一个包。</li></ul><h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><ul><li><code>-y</code>: 如果在没有配置的情况下使用 <code>-S</code> 或 <code>-Sy</code> 选项，则自动添加默认服务器。</li><li><code>--noconfirm</code>: 不提示用户确认。</li><li><code>--needed</code>: 只安装新软件包，忽略已经安装的。</li><li><code>--overwrite &lt;pattern&gt;</code>: 强制覆盖文件。</li></ul><p>请注意，使用 <code>pacman</code> 时需要管理员权限，通常通过 <code>sudo</code> 或在终端中以 root 用户身份运行来获得。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;code&gt;pacman&lt;/code&gt; 是 Arch Linux 及其衍生发行版中的包管理器。它用于安装、卸载、升级以及搜索软件包。常用的 &lt;code&gt;pacman&lt;/code&gt; 命令及其用法如下：&lt;/p&gt;
+&lt;h3 id=&quot;基本操作&quot;&gt;&lt;a href=&quot;#基本操作&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>C语言并发控制访问</title>
